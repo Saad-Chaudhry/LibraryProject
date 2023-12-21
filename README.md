@@ -2,22 +2,11 @@
 
 A Django application for managing a database of books and authors. Users can perform CRUD operations on book records, manage author details, and retrieve useful statistics through aggregation methods.
 
-## Screenshots
+## Screenshot
 
-![Screenshot 1](https://drive.google.com/file/d/1EEE1tw4d5FBKNoXX9IZ2Mw535Ztuv88O/view?usp=sharing)
-*Login Page*
+#### Book List
+![Screenshot](https://i.ibb.co/5rMR7YQ/Screenshot-2023-12-22-023030.png)
 
-![Screenshot 2](https://drive.google.com/file/d/1IgVvElR6iNUII1UIzTi-mIueDoPxBjLW/view?usp=sharing)
-*Sign Up Page*
-
-![Screenshot 3](https://drive.google.com/file/d/1pkW6vrhuvBVeJ4hmz4qmG--vToBW3N3j/view?usp=sharing)
-*Library Home*
-
-![Screenshot 4](https://drive.google.com/file/d/1POxn479AgBHiQ4CVIPUTEye1YnpCHOMy/view?usp=sharing)
-*Books List*
-
-![Screenshot 5](https://drive.google.com/file/d/1XI-FCGRJhPQG8IB72G1kdrn5rShjobbx/view?usp=sharing)
-*Aggregation Methods*
 
 ## Setup Instructions
 
