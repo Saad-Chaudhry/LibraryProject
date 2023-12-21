@@ -4,17 +4,20 @@ A Django application for managing a database of books and authors. Users can per
 
 ## Screenshots
 
-![Screenshot 1](url_to_screenshot_1)
+![Screenshot 1](https://drive.google.com/file/d/1EEE1tw4d5FBKNoXX9IZ2Mw535Ztuv88O/view?usp=sharing)
 *Login Page*
 
-![Screenshot 2](url_to_screenshot_2)
+![Screenshot 2](https://drive.google.com/file/d/1IgVvElR6iNUII1UIzTi-mIueDoPxBjLW/view?usp=sharing)
 *Sign Up Page*
 
-![Screenshot 3](url_to_screenshot_3)
+![Screenshot 3](https://drive.google.com/file/d/1pkW6vrhuvBVeJ4hmz4qmG--vToBW3N3j/view?usp=sharing)
 *Library Home*
 
-![Screenshot 4](url_to_screenshot_4)
+![Screenshot 4](https://drive.google.com/file/d/1POxn479AgBHiQ4CVIPUTEye1YnpCHOMy/view?usp=sharing)
 *Books List*
+
+![Screenshot 5](https://drive.google.com/file/d/1XI-FCGRJhPQG8IB72G1kdrn5rShjobbx/view?usp=sharing)
+*Aggregation Methods*
 
 ## Setup Instructions
 
@@ -57,3 +60,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 Visit http://127.0.0.1:8000/ in your web browser to access the application.
+
+## Author
+
+- [@Saad-Chaudhry](https://github.com/Saad-Chaudhry)
