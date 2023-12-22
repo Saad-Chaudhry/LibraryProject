@@ -39,7 +39,9 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 6. Create Superuser
+### 6. Create Super User
+##### Username: saad
+##### Password: saad
 ```bash
 python manage.py createsuperuser
 ```
