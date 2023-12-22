@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author List</title>
+    <link rel="stylesheet" href="{% static 'styles/list.css' %}">
+</head>
+<body>
+    <h1>Author List</h1>
+    <a href="{% url 'author_new' %}">Add New Author</a>
+    <a href="{% url 'home' %}">Back</a>
+
+    <table>
+        <form method = "GET" action = "{% url 'author_list' %}">
+            <input type="text" name="q" placeholder="Search by author" />
+        </form>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        {% for author in author_list %}
+            <tr>
+                <td>{{ author.first_name }}</td>
+                <td>{{ author.last_name }}</td>
+                <td>{{ author.address }}</td>
+                <td>
+                    <a href="{% url 'author_edit' pk=author.pk %}">Edit</a>
+                    <a href="{% url 'author_delete' pk=author.pk %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
