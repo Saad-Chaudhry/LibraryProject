@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{%load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="{% static 'styles/list.css' %}">
+</head>
+<body>
+    <h1>Book List</h1>
+    <a href="{% url 'book_new' %}">Add New Book</a>
+    <a href="{% url 'home' %}">Back</a>
+
+    
+
+    <table>
+        <form method = "GET" action = "{% url 'book_list' %}">
+            <input type="text" name="q" placeholder="Search by title" />
+        </form>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Publication Year</th>
+            <th>ISBN</th>
+            <th>Price ⟨₹⟩</th>
+            <th>Actions</th>
+        </tr>
+        {% for book in book_list %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.publication_year }}</td>
+                <td>{{ book.isbn }}</td>
+                <td>{{ book.price }}</td>
+                <td>
+                    <a href="{% url 'book_edit' book.id %}">Edit</a>
+                    <a href="{% url 'book_delete' book.id %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

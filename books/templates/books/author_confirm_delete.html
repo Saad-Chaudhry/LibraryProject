@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Author</title>
+    <link rel="stylesheet" href="{% static 'styles/add.css' %}">
+</head>
+<body>
+    <h1>Delete Existing Author</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        are you want to delete "{{author}}"?
+        <br>
+
+        <button type="submit">Delete Author</button>
+    </form>
+
+    <a href="{% url 'author_list' %}">Back to Author List</a>
+</body>
+</html>

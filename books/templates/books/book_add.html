@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="{% static 'styles/add.css' %}">
+</head>
+<body>
+    <h1>Add New Book</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Add Book</button>
+    </form>
+
+    <a href="{{request.META.HTTP_REFERER}}">Back to Previous Page</a>
+</body>
+</html>

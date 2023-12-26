@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 50px rgba(13, 4, 49, 0.1);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <title>Aggregation</title>
+</head>
+<body>
+
+<div class="container">
+    <a href="{% url 'home' %}"><button>Back to Home Page</button></a>
+    <h1>Aggregation Methods</h1>
+    <button>Total Number of Books</button>
+    <br>
+    {{total_books_count}}
+    <br>
+    <button>Average Price of Books</button>
+    <br>
+    {{average_price}}
+    <br>
+    <button>Oldest and Newest Books</button>
+    <br>
+    {{oldest_book.title}}: {{oldest_book.publication_year}}
+    <br>
+    {{newest_book.title}}: {{newest_book.publication_year}}
+    <br>
+    <button>Books Published Each Year</button>
+    <br>
+    {% for response in response_content %}
+      ->{{response}}
+      <br>
+    {% endfor %}
+</div>
+
+</body>
+</html>
